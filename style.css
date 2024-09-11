@@ -1,0 +1,277 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: lightgrey;
+    height: 40px;
+    width: 100%;
+   
+}
+
+nav .left-content {
+    flex: 1;
+    margin-top: 5px;
+}
+
+nav .icons {
+    display: flex;
+    gap: 0;
+}
+
+nav .icons i {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
+    
+}
+
+.col {
+    margin-left: 150px;
+}
+
+.row1 {
+    height: 40px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.col1 {
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.col2 {
+    margin-left: 85px;
+}
+
+.popees {
+    height: 100px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h4 {
+    padding-top: 45px;
+    border-style: dotted;
+}
+
+.shop {
+    border-right: none;
+}
+
+.trending {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.row3 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.col3 {
+    height: 550px;
+    position: relative;
+}
+
+.image-default, .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 475px;
+    transition: opacity 0.3s ease;
+}
+
+.image-hover {
+    opacity: 0;
+}
+
+.col3:hover .image-hover {
+    opacity: 1;
+}
+
+.col3:hover .image-default {
+    opacity: 0;
+}
+
+.text {
+    position: relative;
+    top: 480px;
+}
+
+.para {
+    margin-top: 0;
+}
+
+.row4 {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 1.5rem;
+    margin-top: 30px;
+}
+
+.col4 {
+    height: 300px;
+    font-weight: 500px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.wear {
+    background-color: whitesmoke;
+    width: 710px;
+}
+
+.maternity {
+    margin-left: 58px;
+}
+
+.our {
+    width: 500px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.butt {
+    background-color: black;
+    color: white;
+    width: 130px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.row5 {
+    margin-top: 50px;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.baby {
+    width: 700px;
+    transition: transform 0.5s ease;
+}
+
+.baby:hover {
+    transform: scale(1.1);
+}
+
+.boys {
+    font-weight: 800;
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.banner {
+    width: 1450px;
+    margin-top: 50px;
+    margin-left: 34px;
+}
+
+.row7 {
+    margin-left: 80px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* media query */
+
+
+@media (max-width: 1024px) {
+    .row, .row3, .row4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .col {
+        margin-left: 0;
+    }
+    .row7 {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 20px;
+    }
+    .banner {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .row, .row3, .row4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .popees {
+        flex-direction: column;
+        height: auto;
+    }
+
+    h4 {
+        padding-top: 10px;
+    }
+
+    .col {
+        margin-left: 0;
+    }
+
+    .maternity {
+        margin-left: 0;
+    }
+
+    .baby {
+        width: 100%;
+    }
+
+    .row7 {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        width: 100%;
+        margin-left: 0;
+    }
+}
